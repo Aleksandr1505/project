@@ -1,0 +1,194 @@
+/* BASE */
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+
+
+/* FONTS */
+
+/* oswald-regular - cyrillic_latin */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../fonts/oswald-v23-cyrillic_latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/oswald-v23-cyrillic_latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* oswald-700 - cyrillic_latin */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url("../fonts/oswald-v23-cyrillic_latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/oswald-v23-cyrillic_latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: "HelveticaNeueCyr-Bold";
+  src: url("../fonts/HelveticaNeueCyr-Bold.woff2") format("woff2"),
+    url("../fonts/HelveticaNeueCyr-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "HelveticaNeueCyr-Heavy";
+  src: url("../fonts/HelveticaNeueCyr-Heavy.woff2") format("woff2"),
+    url("../fonts/HelveticaNeueCyr-Heavy.woff") format("woff");
+}
+
+/* MAIN PART */
+
+.eight-section {
+  background-image: url("../images/section-8-bg.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 38px 10px 3px 10px;
+}
+
+.first-part {
+  margin: 0 auto;
+  margin-bottom: 26px;
+}
+
+.first-part__title {
+  margin: 0 auto;
+  margin-bottom: 18px;
+  color: #ffffff;
+  font-family: "Oswald";
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.first-part__title--span {
+  color: rgb(254, 192, 43);
+}
+
+.first-part__content {
+  margin: 0 auto;
+  color: #ffffff;
+  font-family: "HelveticaNeueCyr-Bold";
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  width: 227px;
+  letter-spacing: 0.48px;
+}
+
+@media (min-width: 768px) {
+  .eight-section {
+    background-image: url("../images/section-8-bg.png");
+    background-position: center -90px;
+  }
+
+  .first-part {
+    margin: 0 60px 20px 60px;
+    position: relative;
+  }
+
+  .first-part::after {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    top: 30px;
+    right: 40px;
+    width: 183px;
+    height: 118px;
+    background-image: url("../images/eight-sec-planet.png");
+    background-repeat: no-repeat;
+  }
+
+  .first-part__title {
+    margin-bottom: 30px;
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .first-part__content {
+    margin: 0;
+    width: 360px;
+    font-size: 25px;
+    letter-spacing: 0.5px;
+    text-align: left;
+  }
+  .back {
+    margin: 0 auto;
+    padding-top: 40px;
+    background-image: url("../images/eight-sec-confetti.png");
+    background-size: contain;
+    width: 602px;
+    height: 100%;
+  }
+
+  .back__certificates-foto {
+    margin: 0 auto;
+    width: 412px;
+    height: 344px;
+  }
+}
+
+@media (min-width: 1220px) {
+  .eight-section {
+    display: flex;
+    position: relative;
+    height: 680px;
+  }
+
+  .eight-section .container {
+    display: flex;
+}
+
+  .first-part {
+    padding-top: 8rem;
+    margin: 0;
+    margin-bottom: 0;
+  }
+
+  .first-part__title {
+    margin-bottom: 50px;
+    font-size: 30px;
+  }
+  .first-part__content {
+    font-size: 35px;
+    width: 506px;
+  }
+
+  .first-part::after {
+    top: 1rem;
+    right: -30px;
+  }
+
+  .back__certificates-foto {
+    margin: 0 auto;
+    width: 572px;
+    height: 480px;
+  }
+
+  .back {
+    width: 842px;
+    height: 100%;
+  }
+}
